@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="adminStyles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -72,7 +73,7 @@
                   <img src="images/profile.png"  class="profile_pic"> <label class="p-2">Mandeep <br><small>Admin</small> </label>
                   </div>
 
-                  <a href="#" class="active">Dashboard</a>
+                  <a href="adminpanel.html" class="active">Dashboard</a>
                   <a href="adminPanelProfile.html" > Profile</a>
                   <a href="adminPanelAddAdmin.html">Add Admin</a>
                   <a href="adminPanelService.html">Services</a>
@@ -87,41 +88,35 @@
                     
                 
                <div class="content " >
-                 
-                <div class="top-head-table border"> List of Workers <br> <small>Recently added</small></div>
-                   
-                 <table class="table w-75">
-                    <thead  >
-                      <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Service</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Price(/hour)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td >Kailash</td>
-                        <td>Electrician</td>
-                        <td>Not alloted</td>
-                        <td>110</td>
-                      </tr>
-                      <tr>
-                          <td >Manish</td>
-                          <td>plumber</td>
-                          <td>Not alloted</td>
-                          <td>100</td>
-                      </tr>
-                      <tr>
-                          <td >Kailash</td>
-                          <td>Electrician</td>
-                          <td>Not alloted</td>
-                          <td>950</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div> 
-             
+                 <div class="jumbotron col-6 mx-auto my-5" style="background-color: rgb(235, 183, 86);">
+                        
+                    <form action="/action_page.php" class="col-11 mx-auto ">
+                        <h2 style="position: relative; top:-25px"><b>Add Service:</b></h2>
+                        <div class="form-group ">
+                        
+                          <input type="text" class="form-control service-field" placeholder="Service name">
+                          
+                         
+                        </div>
+                        <div class="form-group">
+                          
+                         <textarea class="form-control service-field" id="description" placeholder="Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                                
+                                <input type="text" class="form-control service-field"  placeholder="Price/hour" >
+                        </div>
+                        <div class="form-group ">
+                                <label for="pwd">Available Timing:</label><br>
+                                <div class="form-inline mt-3 " >
+                                From:<input type="time" class="form-control service-field ml-2 mr-3 col-4"  >
+                                To:<input type="time" class="form-control service-field ml-2 col-5"  >
+                                </div>
+                        </div>
+                        <button type="submit" class="btn btn-warning mt-3  text-dark">Submit</button>
+                      </form>
+                    </div> 
+                </div>
             
 
               </body>

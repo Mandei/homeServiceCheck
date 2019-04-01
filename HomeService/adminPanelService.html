@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HomeService</title>
+    <title>Service List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,14 +28,14 @@
                   <span class="navbar-toggler-icon"></span>
                 </button>
               
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
+                    <li>
                                 <h1 class="text-white align-bottom mx-3 my-2">Home Service</h1>
                     </li>
                         
                     <li class="nav-item ">
-                      <input class=" search mx-2 " type="search" placeholder="Search" aria-label="Search"><a><i id="nav_search_icon" class="fa fa-search" href="search.html"></i></a>
+                      <input class=" search " type="search" placeholder="Search" aria-label="Search"><a><i id="nav_search_icon" class="fa fa-search" href="search.html"></i></a>
                     </li>
 
                  
@@ -44,7 +44,7 @@
                   
                     <form class="form-inline my-2 my-lg-0 ">
 
-                        <a href="#" class="notification mg-15 ml-2">
+                        <a href="#" class="notification mg-15 ">
                             <span><i class="fa fa-envelope"></i></span>
                             <span class="badge">2</span>
                         </a>
@@ -64,18 +64,18 @@
               </nav>
         </div>
               
-        <button class="toggle_btn hide-large" onclick="openSidebar()" >&#9776;</button>
+              <button class="toggle_btn hide-large" onclick="openSidebar()" >&#9776;</button>
               <div class="sidenav sidenav-collapse  "  id="mySidenav">
-                  
+                
                   <a href="javascript:void(0)" class="closebtn hide-large" onclick="closeSidebar()" >&times;</a>
                   <div class="d-inline-flex  "> 
                   <img src="images/profile.png"  class="profile_pic"> <label class="p-2">Mandeep <br><small>Admin</small> </label>
                   </div>
 
-                  <a href="#" class="active">Dashboard</a>
-                  <a href="adminPanelProfile.html" > Profile</a>
+                  <a href="adminpanel.html">Dashboard</a>
+                  <a href="adminPanelProfile.html"> Profile</a>
                   <a href="adminPanelAddAdmin.html">Add Admin</a>
-                  <a href="adminPanelService.html">Services</a>
+                  <a href="#" class="active">Services</a>
                   <a href="adminPanelRequest.html">Requests</a>
                   
               </div> 
@@ -88,38 +88,54 @@
                 
                <div class="content " >
                  
-                <div class="top-head-table border"> List of Workers <br> <small>Recently added</small></div>
+                <div class="top-head-table border"> <h2>Services Available</h2> </div>
                    
-                 <table class="table w-75">
+                
+                 <table class="table service-scroll w-75  ">
                     <thead  >
                       <tr>
-                        <th scope="col">Name</th>
-                        <th scope="col">Service</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">Service Name</th>
+                        <th scope="col">Service description</th>
                         <th scope="col">Price(/hour)</th>
+                        <th scope="col">Available times</th>
+                        <th></th>
                       </tr>
                     </thead>
                     <tbody>
+                    
+                      
                       <tr>
-                        <td >Kailash</td>
-                        <td>Electrician</td>
-                        <td>Not alloted</td>
-                        <td>110</td>
+                        <td ><input type="radio" name="service" id="plumber">  Plumber</td>
+                        <td>Repair and fitting</td>
+                        <td>90</td>
+                        <td>10:00 am-1:00pm</td>   
                       </tr>
                       <tr>
-                          <td >Manish</td>
-                          <td>plumber</td>
-                          <td>Not alloted</td>
-                          <td>100</td>
+                        <td ><input type="radio" name="service" id="electrician">  Electrician</td>
+                        <td>New Connection</td>
+                        <td>120</td>
+                        <td>11:00 am-2:00pm</td>
                       </tr>
                       <tr>
-                          <td >Kailash</td>
-                          <td>Electrician</td>
-                          <td>Not alloted</td>
-                          <td>950</td>
+                        <td ><input type="radio" name="service" id="mechanic">  Mechanic</td>
+                        <td>Motor repair</td>
+                        <td>100</td>
+                        <td>9:00 am-5:00pm</td>
+                      </tr>
+                      
+                      <tr>
+                        <td ><input type="radio" name="service" id="plumber">  Plumber</td>
+                        <td>New connection fitting</td>
+                        <td>70</td>
+                        <td>10:00 am-1:00pm</td>
                       </tr>
                     </tbody>
                   </table>
+
+                  
+                  <a href="adminPanelAddService.html"><button class="update-service-btn">Add service</button></a>
+                  <a href="adminPanelAddService.html"><button class="add-service-btn">Update service</button></a>
+                
                 </div> 
              
             
