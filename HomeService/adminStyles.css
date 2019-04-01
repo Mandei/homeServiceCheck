@@ -78,7 +78,7 @@
     top: 0;
     left: 0;
     z-index:2;
-    background-color: #111;
+    background-color: rgb(44, 41, 41);
     overflow-x: hidden;
     transition: 1s;
     padding-top: 60px;
@@ -147,7 +147,7 @@
     }
 
   .top-head-table{
-        margin: 5% 16% 0 ;
+        margin: 15% 16% 0 ;
         width:73%;
         color:whitesmoke;
         position: relative;
@@ -180,7 +180,7 @@
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    margin: 5% auto;
+    margin: 15% auto;
     text-align: center;
     font-family: arial;
     float: left;
@@ -229,7 +229,7 @@
 
   .details
   {
-    margin :5%;
+    margin :15% 5%;
     width:60%;
     padding: 12px;
     float:left;
@@ -277,7 +277,14 @@
    .service-field{
     background-color:transparent !important;
     border:none ; 
+    outline: none;
     border-bottom: 2px solid black
+   }
+
+   .service-field input:focus
+  {
+    border: none;
+    outline: none;
    }
   
    
